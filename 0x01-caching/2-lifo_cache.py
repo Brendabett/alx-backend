@@ -3,7 +3,7 @@
 """
 
 
-BaseCaching = __import__(base_caching).BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LIFOCache(BaseCaching):
@@ -19,7 +19,7 @@ class LIFOCache(BaseCaching):
         if not (key is None or item is None):
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS\
                  and key not in self.cache_data:
-                print(fDISCARD: {self.history[-1]})
+                print(f'DISCARD: {self.history[-1]}')
                 self.cache_data.pop(self.history[-1])
                 del self.history[-1]
             if key in self.history:
