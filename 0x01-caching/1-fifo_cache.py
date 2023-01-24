@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ FIFO caching
 """
-BaseCaching = __import__(base_caching).BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class FIFOCache(BaseCaching):
@@ -18,7 +18,7 @@ class FIFOCache(BaseCaching):
             if len(self.cache_data) > BaseCaching.MAX_ITEMS:
                 first_in = list(self.cache_data.keys())[0]
                 del self.cache_data[first_in]
-                print(fDISCARD: {first_in})
+                print(f'DISCARD: {first_in}')
 
     def get(self, key):
         """ returns the value in self.cache_data linked to key
