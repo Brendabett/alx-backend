@@ -11,7 +11,7 @@ class LFUCache(BaseCaching):
 
     def __init__(self):
         """
-        Initialize the class with the parents init method
+        Initialize the class with the parent's init method
         """
         super().__init__()
         self.history = []
