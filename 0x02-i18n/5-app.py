@@ -56,7 +56,7 @@ def get_locale():
     locale = request.args.get("locale")
     if locale:
         return locale
-    return request.accept_languages.best_match(app.config[LANGUAGES])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route(/, methods=["GET"], strict_slashes=False)
@@ -64,7 +64,7 @@ def hello():
     """
     hello.
     """
-    return render_template(5-index.html)
+    return render_template('5-index.html')
 
 
 if __name__ == "__main__":
