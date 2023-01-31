@@ -24,7 +24,7 @@ app.config.from_object(Config)
 
 
 @babel.localeselector
-def get_locale()
+def get_locale():
     """
     detect if the incoming request contains locale
     argument and ifs value is a supported locale, return it
