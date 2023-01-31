@@ -1,7 +1,0 @@
-@app.route('/', strict_slashes=False)
-def index() -> str:
-    """
-    The function `index()` returns the rendered template `index.html`
-    :return: The index.html file is being returned.
-    """
-
