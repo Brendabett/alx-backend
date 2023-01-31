@@ -31,10 +31,10 @@ def get_locale():
     locale = request.args.get("locale")
     if locale:
         return locale
-    return request.accept_languages.best_match(app.config[LANGUAGES])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-@app.route(/, methods=["GET"], strict_slashes=False)
+@app.route('/', methods=["GET"], strict_slashes=False)
 def hello():
     """
     return string
