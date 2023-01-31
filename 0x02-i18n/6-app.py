@@ -58,21 +58,21 @@ def get_locale():
         return locale
     user = request.args.get("login_as")
     if user:
-        lang = users.get(int(user)).get(locale)
-        if lang in app.config[LANGUAGES]:
+        lang = users.get(int(user)).get('locale')
+        if lang in app.config['LANGUAGES']:
             return lang
     headers = request.headers.get("locale")
     if headers:
         return headers
-    return request.accept_languages.best_match(app.config[LANGUAGES])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-@app.route(/, methods=["GET"], strict_slashes=False)
+@app.route('/', methods=["GET"], strict_slashes=False)
 def hello():
     """
     hello.
     """
-    return render_template(6-index.html)
+    return render_template('6-index.html')
 
 
 if __name__ == "__main__":
